@@ -1,0 +1,51 @@
+1- Inicio
+2- nombre, x(200)[{A-Z}, {a-z},{BS}]
+3- cedula, i[0, n]
+4- horas_matutinas, d[0, n]
+5- horas_nocturnas, d[0, n]
+6- valor_matutina, d[0, n] <-- 10$
+7- valor_nocturna, d[0, n] <--- 15$
+8- mensaje ,x(500)[{A-Z}, {a-z},{BS}] <-- " "
+9- contador ,i[0, n]
+10- bandera , l <-- true
+11- opcion, x(2)[{a-z}]
+12- extras, i[0, n] <-- 10%
+13- sueldo_m, d[0, n]
+14- sueldo_n, d[0, n]
+15- sueldo_f, d[0 ,n]
+16- adicional, d[0, n]
+17- sueldo_s, d[0, n]
+
+18- Mientras(bandera == True)
+19-  Escribir "Ingrese el nombre del empleado"
+20-  Leer nombre
+21-  Escribir "Ingrese el numero de cedula del empleado"
+22-  Leer cedula
+23-  Escribir "Ingrese horas matutinas trabajadas"
+24-  Leer horas_matutinas
+25-  Escribir "Ingrese horas nocturnas trabajadas"
+26-  Leer horas_nocturnas
+
+27- sueldo_m = horas_matutinas * valor_matutina
+28- sueldo_n = horas_nocturnas * valor_nocturnas
+29- sueldo_s = sueldo_m + sueldo_n
+    
+30-   Si(horas_nocturnas >= 10)entonces
+31-      adicional =  sueldo_n * extras / 100 
+32-      sueldo_n = adicional + sueldo_n
+33-      sueldo_f = sueldo_n + sueldo_m
+34-      mensaje = mensaje +"Nomina de trabajadores\n" + nombre + cedula +"\n" 
+         + "Horas matutinas trabajadas" + horas_m + "Horas nocturnas trabajadas" + horas_n + "\n"
+         + "Total a cancelar" + sueldo_f
+ 	 contador  = contador + 1
+35-      Escribir "Desea terminar el proceso? Ingrese "si" para salir"
+36-      Leer opcion
+	   Si (opcion == si) entonces
+	   bandera = false
+37-   	De lo contrario
+38-	mensaje = mensaje + "Horas matutinas trabajadas: " + sueldo_m + "\n" + "Horas nocturnas trabajadas: " + sueldo_n + "\n"
+	"Total a cancelar: " + suelo_s +"\n" +"Numero de empleados" + contador
+39-   FinSi	
+40-FinMientras
+41-Escribir mensaje 
+42- Fin 
